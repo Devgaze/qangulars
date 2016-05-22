@@ -64,6 +64,7 @@ module.exports = function(config) {
       'karma-spec-reporter'
     ],
 
+    // Comment out to disable `karma-spec-reporter`
     reporters: ['spec'],
     specReporter: {
         maxLogLines: 5,         // limit number of lines logged per test
