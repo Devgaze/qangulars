@@ -7,8 +7,8 @@ module.exports = function (grunt, data) {
 
   return {
     options: {
-      sassDir: 'app/styles',
-      cssDir: '.tmp/styles',
+      sassDir: data.appPath + '/styles',
+      cssDir: data.rootPath + '/.tmp/styles',
       generatedImagesDir: data.rootPath + '/.tmp/images/generated',
       imagesDir: data.appPath + '/images',
       javascriptsDir: data.appPath + '/scripts',
@@ -19,8 +19,7 @@ module.exports = function (grunt, data) {
       httpFontsPath: data.appPath + '/styles/fonts',
       relativeAssets: false,
       assetCacheBuster: false,
-      raw: 'Sass::Script::Number.precision = 10\n',
-      trace: true
+      raw: 'Sass::Script::Number.precision = 10\n'
     },
     dist: {
       options: {
