@@ -1,14 +1,14 @@
 'use strict';
 
 module.exports = function (grunt, data) {
-
+  
   if (grunt.cli.options.debug) 
     console.log('Loading `compass.js`');
-
+  
   return {
     options: {
       sassDir: data.appPath + '/styles',
-      cssDir: data.rootPath + '/.tmp/styles',
+      cssDir:  data.rootPath + '/.tmp/styles',
       generatedImagesDir: data.rootPath + '/.tmp/images/generated',
       imagesDir: data.appPath + '/images',
       javascriptsDir: data.appPath + '/scripts',
