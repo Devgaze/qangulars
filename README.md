@@ -2,11 +2,11 @@
 
 *Quick Angularjs Scaffolding* is my alternation of a project template built with a popular *Yeoman's Angular generator*. 
 
-Yeoman's Angular Generator is a great tool and I enjoy using it, but every time when I start an AngularJS project, I find myself tweaking the project template  (mostly in the same way) to suit my needs. That leads me to spend time on unnecessary things, which is unproductive, especially when I am under a deadline constraint.
+Yeoman's Angular Generator is a great tool and I enjoy using it, but every time when I start an AngularJS project, I find myself tweaking the project template  (mostly in the same way) to suit my needs. That leads me to spend time on unnecessary things, which is not productive, especially when I am under a deadline constraint.
 
 ## How to use it?
 
-There is only step, clone the *repo* into your working directory
+Simply clone the repo to your working directory and start using it
 
     # clone the project
     git clone https://github.com/Devgaze/qangulars.git
@@ -27,7 +27,10 @@ For testing you have available following commands
     # run end-to-end tests with protractor
     grunt e2e
 
+For deployment to your live server, use the following
 
+    # deploy to live server
+    grunt deploy
 
 ## What is changed?
 
