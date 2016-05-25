@@ -53,6 +53,7 @@ For initial version (1.0.0) following things were done:
 
 ## Project structure
 
+```
 .
 ├── Gruntfile.js
 ├── LICENSE
@@ -128,7 +129,7 @@ For initial version (1.0.0) following things were done:
 │   ├── watch.js
 │   └── wiredep.js
 └── package.json
-
+```
 
 ## Maintenance - what is the plan?
 
