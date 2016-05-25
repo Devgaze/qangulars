@@ -98,15 +98,6 @@ For initial version (1.0.0) following things were done:
 ├── config
 │   └── karma.conf.js
 ├── dist
-│   ├── 404.html
-│   ├── favicon.ico
-│   ├── images
-│   │   └── yeoman.png
-│   ├── index.html
-│   ├── robots.txt
-│   └── views
-│       ├── about.html
-│       └── main.html
 ├── grunt
 │   ├── aliases.js
 │   ├── cdnify.js
