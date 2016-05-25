@@ -53,7 +53,82 @@ For initial version (1.0.0) following things were done:
 
 ## Project structure
 
-to be added once the structure finished...
+.
+├── Gruntfile.js
+├── LICENSE
+├── README.md
+├── app
+│   ├── 404.html
+│   ├── favicon.ico
+│   ├── humans.txt
+│   ├── images
+│   ├── index.html
+│   ├── robots.txt
+│   ├── scripts
+│   │   ├── app.constants.js
+│   │   ├── app.js
+│   │   ├── base.routes.js
+│   │   ├── components
+│   │   │   └── welcome
+│   │   │       ├── _header.partial.html
+│   │   │       ├── _welcome.style.scss
+│   │   │       ├── welcome.constant.js
+│   │   │       ├── welcome.controller.js
+│   │   │       ├── welcome.decorator.js
+│   │   │       ├── welcome.directive.js
+│   │   │       ├── welcome.factory.js
+│   │   │       ├── welcome.filter.js
+│   │   │       ├── welcome.module.js
+│   │   │       ├── welcome.provider.js
+│   │   │       ├── welcome.routes.js
+│   │   │       ├── welcome.service.js
+│   │   │       ├── welcome.spec.js
+│   │   │       └── welcome.view.html
+│   │   └── shared
+│   │       ├── capitalize
+│   │       │   └── capitalize.filter.js
+│   │       └── spinner
+│   │           ├── _spinner.style.scss
+│   │           ├── spinner.directive.js
+│   │           └── spinner.view.html
+│   └── styles
+│       └── main.scss
+├── bower.json
+├── config
+│   └── karma.conf.js
+├── dist
+│   ├── 404.html
+│   ├── favicon.ico
+│   ├── images
+│   │   └── yeoman.png
+│   ├── index.html
+│   ├── robots.txt
+│   └── views
+│       ├── about.html
+│       └── main.html
+├── grunt
+│   ├── aliases.js
+│   ├── cdnify.js
+│   ├── clean.js
+│   ├── compass.js
+│   ├── concurrent.js
+│   ├── connect.js
+│   ├── copy.js
+│   ├── filerev.js
+│   ├── htmlmin.js
+│   ├── imagemin.js
+│   ├── jscs.js
+│   ├── jshint.js
+│   ├── karma.js
+│   ├── ngAnnotate.js
+│   ├── postcss.js
+│   ├── svgmin.js
+│   ├── usemin.js
+│   ├── useminPrepare.js
+│   ├── watch.js
+│   └── wiredep.js
+└── package.json
+
 
 ## Maintenance - what is the plan?
 
