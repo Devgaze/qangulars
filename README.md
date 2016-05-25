@@ -55,20 +55,9 @@ For initial version (1.0.0) following things were done:
 
 ```
 .
-├── Gruntfile.js
-├── LICENSE
-├── README.md
 ├── app
-│   ├── 404.html
-│   ├── favicon.ico
-│   ├── humans.txt
 │   ├── images
-│   ├── index.html
-│   ├── robots.txt
 │   ├── scripts
-│   │   ├── app.constants.js
-│   │   ├── app.js
-│   │   ├── base.routes.js
 │   │   ├── components
 │   │   │   └── welcome
 │   │   │       ├── _header.partial.html
@@ -85,16 +74,23 @@ For initial version (1.0.0) following things were done:
 │   │   │       ├── welcome.service.js
 │   │   │       ├── welcome.spec.js
 │   │   │       └── welcome.view.html
-│   │   └── shared
-│   │       ├── capitalize
-│   │       │   └── capitalize.filter.js
-│   │       └── spinner
-│   │           ├── _spinner.style.scss
-│   │           ├── spinner.directive.js
-│   │           └── spinner.view.html
-│   └── styles
-│       └── main.scss
-├── bower.json
+│   │   ├── shared
+│   │   │   ├── capitalize
+│   │   │   │   └── capitalize.filter.js
+│   │   │   └── spinner
+│   │   │       ├── _spinner.style.scss
+│   │   │       ├── spinner.directive.js
+│   │   │       └── spinner.view.html
+│   │   ├── app.constants.js
+│   │   ├── app.js
+│   │   └── base.routes.js
+│   ├── styles
+│   │   └── main.scss
+│   ├── 404.html
+│   ├── favicon.ico
+│   ├── humans.txt
+│   ├── index.html
+│   └── robots.txt
 ├── config
 │   └── karma.conf.js
 ├── dist
@@ -119,6 +115,10 @@ For initial version (1.0.0) following things were done:
 │   ├── useminPrepare.js
 │   ├── watch.js
 │   └── wiredep.js
+├── Gruntfile.js
+├── LICENSE
+├── README.md
+├── bower.json
 └── package.json
 ```
 
