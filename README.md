@@ -45,7 +45,7 @@ For initial version (1.0.0) following things were done:
   * if you prefer default reporter just comment out line 68 of `config/karma.conf.js`
  * added **load-grunt-config** module to de-clutter *Gruntfile.js*
  * moved grunt config files into `grunt/` directory to keep everything neat and tidy (grunt tasks are defined in `grunt/aliases.js`)
- * added **connect_modrewrite** module to complement **livereload**
+ * added **connect_modrewrite** module to complement **connect** server
  * added **grunt-karma** 
  * replaced Yeoman's way of calling test to `grunt test`
  * stay tuned - more will be added here before official release 
