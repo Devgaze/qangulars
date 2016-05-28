@@ -11,9 +11,10 @@ module.exports = function (grunt) {
     jitGrunt:  {
       staticMappings: {
         useminPrepare: 'grunt-usemin',
-        cdnify: 'grunt-google-cdn'//,
+        cdnify: 'grunt-google-cdn',
+
         // protractor:'grunt-protractor-runner'
-      }
+      },
     },
     data: {
       rootPath: rootPath,
@@ -21,9 +22,10 @@ module.exports = function (grunt) {
       distPath: 'dist',
       appConfigPath: path.join(rootPath, '/config'),
       specFileLocation: rootPath + '/app/scripts/**/*.spec.js',
-      modRewrite  : require('connect-modrewrite')//,
+      modRewrite: require('connect-modrewrite'),
+
       // e2eConfigFileLocation: rootPath + '/protractor.config.js',
-    }
+    },
   };
 
   require('time-grunt')(grunt);

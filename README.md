@@ -38,6 +38,13 @@ For deployment to your live server, use the following
     # deploy to live server
     grunt deploy
 
+And for creating a documentation use following command
+
+    # create documentation
+    grunt bookify
+
+Documentation is generated in `doc/` folder.
+
 ## What is changed?
 
 Mostly focusing on project structure and updating *deprecated packages* where some were added, some deleted and some marked *deprecated* updated with the favoured versions.
@@ -60,6 +67,7 @@ For initial version (1.0.0) following things were done:
      * not using *toastr*
      * *blocks* renamed to **internals**
      * added additional global object to IIFE's called `projectName` which should ideally be renamed per project
+ * added **grunt-jsdoc** and **ink-docstrap** for building documentation - it is standalone command, but you can integrate it in build process
  * stay tuned - more will be added here before official release 
 
 

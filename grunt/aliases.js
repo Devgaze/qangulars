@@ -4,13 +4,14 @@ console.log('Loading `aliases.js`');
 
 var serveTasks = [
   'clean:server',
+
   // 'html2js:main',
   'jshint',
   'wiredep',
   'concurrent:server',
   'postcss:server',
   'connect:livereload',
-  'watch'
+  'watch',
 ];
 
 var testTasks = [
@@ -19,7 +20,7 @@ var testTasks = [
   'concurrent:test',
   'postcss',
   'connect:test',
-  'karma'
+  'karma',
 ];
 
 // var e2eTasks = [
@@ -29,6 +30,7 @@ var testTasks = [
 
 var buildTasks = [
   'clean:dist',
+
   // 'html2js:main',
   'wiredep',
   'useminPrepare',
@@ -42,28 +44,28 @@ var buildTasks = [
   'uglify',
   'filerev',
   'usemin',
-  'htmlmin'
+  'htmlmin',
 ];
 
 var defaultTasks = [
   'newer:jshint',
   'newer:jscs',
   'test',
-  'build'
+  'build',
 ];
 
 module.exports = {
 
   /* serve */
-  'serve': {
+  serve: {
     description: '',
-    tasks: serveTasks
+    tasks: serveTasks,
   },
 
   /* test */
-  'test': {
+  test: {
     description: '',
-    tasks: testTasks
+    tasks: testTasks,
   },
 
   // 'e2e': {
@@ -72,16 +74,22 @@ module.exports = {
   // },
 
   /* build */
-  'build': {
+  build: {
     description: '',
-    tasks: buildTasks
+    tasks: buildTasks,
+  },
+
+  /* create documentation */
+  bookify: {
+    description: '',
+    tasks: ['jsdoc:dist'],
   },
 
   /* build */
-  'default': {
+  default: {
     description: '',
-    tasks: defaultTasks
-  }
+    tasks: defaultTasks,
+  },
 
 };
 
