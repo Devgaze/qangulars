@@ -5,7 +5,7 @@ module.exports = function (grunt, data) {
   if (grunt.cli.options.debug) {
     console.log('Loading `watch.js`');
   }
-  console.log(data.appPath);
+
   return {
     // html2js: {
     //   files: [

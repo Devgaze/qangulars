@@ -8,7 +8,7 @@ module.exports = function (grunt, data) {
 
   return {
     options: {
-      jshintrc: '.jscsrc',
+      config: '.jscsrc',
       verbose: true
     },
     all: {
