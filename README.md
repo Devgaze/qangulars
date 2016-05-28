@@ -40,7 +40,7 @@ For deployment to your live server, use the following
 
 ## What is changed?
 
-I aimed to change as little as possible but turned out there was quite a lot of changes. Mostly focusing on project structure and updating *deprecated packages* where some were added, some deleted and some marked *deprecated* updated with the favoured versions.
+Mostly focusing on project structure and updating *deprecated packages* where some were added, some deleted and some marked *deprecated* updated with the favoured versions.
 
 For initial version (1.0.0) following things were done:
 
@@ -48,14 +48,14 @@ For initial version (1.0.0) following things were done:
  * updated *grunt-postcss* to newer version
  * removed *grunt-angular-templates* but feel free to use it if you usually do
  * added **karma-spec-reporter** for more descriptive test output
-  * if you prefer default reporter just comment out line saying `reporters: ['spec'],`
+  * if you prefer default reporter, in `config/karma.config.js` file just comment out line saying `reporters: ['spec'],`
  * added **load-grunt-config** module to de-clutter *Gruntfile.js*
  * moved grunt config files into `grunt/` directory to keep everything neat and tidy (grunt tasks are defined in `grunt/aliases.js`)
  * added **connect_modrewrite** module for easier mod rewrites on **connect** (dev) server
  * added **grunt-karma** 
- * replaced Yeoman's way of calling test to `grunt test`
+ * replaced Yeoman's way of running tests to `grunt test`
  * removed **grunt-contrib-compass** and added **grunt-sass** package
- * project restructured to be more aligned to what [Papa John's and AngularJs Team](https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md#modularity) recommends
+ * project restructured to be more aligned to what [Papa John's and AngularJs Team](https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md) recommends
    * some things were omitted and some altered though
      * not using *toastr*
      * *blocks* renamed to **internals**
@@ -68,49 +68,48 @@ For initial version (1.0.0) following things were done:
 ```
 .
 ├── app
+│   ├── images
+│   ├── scripts
+│   │   ├── components
+│   │   │   ├── welcome
+│   │   │   │   ├── _header.partial.html
+│   │   │   │   ├── _welcome.scss
+│   │   │   │   ├── welcome.controller.js
+│   │   │   │   ├── welcome.controller.spec.js
+│   │   │   │   ├── welcome.module.js
+│   │   │   │   ├── welcome.routes.js
+│   │   │   │   └── welcome.view.html
+│   │   │   └── components.module.js
+│   │   ├── core
+│   │   │   ├── internals
+│   │   │   │   ├── exception
+│   │   │   │   │   ├── exception-handler.provider.js
+│   │   │   │   │   ├── exception.factory.js
+│   │   │   │   │   └── exception.module.js
+│   │   │   │   ├── logger
+│   │   │   │   │   ├── logger.factory.js
+│   │   │   │   │   └── logger.module.js
+│   │   │   │   ├── router
+│   │   │   │   │   ├── router-helper.provider.js
+│   │   │   │   │   └── router.module.js
+│   │   │   │   └── internals.module.js
+│   │   │   ├── core.constants.js
+│   │   │   └── core.module.js
+│   │   ├── shared
+│   │   │   ├── spinner
+│   │   │   │   ├── _spinner.style.scss
+│   │   │   │   ├── spinner.directive.js
+│   │   │   │   ├── spinner.module.js
+│   │   │   │   └── spinner.view.html
+│   │   │   └── shared.module.js
+│   │   └── app.module.js
+│   ├── styles
+│   │   └── main.scss
 │   ├── 404.html
 │   ├── favicon.ico
 │   ├── humans.txt
-│   ├── images
 │   ├── index.html
-│   ├── robots.txt
-│   ├── scripts
-│   │   ├── app.module.js
-│   │   ├── components
-│   │   │   ├── components.module.js
-│   │   │   └── welcome
-│   │   │       ├── _header.partial.html
-│   │   │       ├── _welcome.scss
-│   │   │       ├── welcome.controller.js
-│   │   │       ├── welcome.controller.spec.js
-│   │   │       ├── welcome.module.js
-│   │   │       ├── welcome.routes.js
-│   │   │       └── welcome.view.html
-│   │   ├── core
-│   │   │   ├── core.constants.js
-│   │   │   ├── core.module.js
-│   │   │   └── internals
-│   │   │       ├── exception
-│   │   │       │   ├── exception-handler.provider.js
-│   │   │       │   ├── exception.factory.js
-│   │   │       │   └── exception.module.js
-│   │   │       ├── internals.module.js
-│   │   │       ├── logger
-│   │   │       │   ├── logger.factory.js
-│   │   │       │   └── logger.module.js
-│   │   │       └── router
-│   │   │           ├── router-helper.provider.js
-│   │   │           └── router.module.js
-│   │   └── shared
-│   │       ├── shared.module.js
-│   │       └── spinner
-│   │           ├── _spinner.style.scss
-│   │           ├── spinner.directive.js
-│   │           ├── spinner.module.js
-│   │           └── spinner.view.html
-│   └── styles
-│       └── main.scss
-├── bower.json
+│   └── robots.txt
 ├── config
 │   └── karma.conf.js
 ├── grunt
@@ -136,9 +135,9 @@ For initial version (1.0.0) following things were done:
 │   └── wiredep.js
 ├── Gruntfile.js
 ├── LICENSE
-├── package.json
-└── README.md
-
+├── README.md
+├── bower.json
+└── package.json
 ```
 
 ## Maintenance - what is the plan?
