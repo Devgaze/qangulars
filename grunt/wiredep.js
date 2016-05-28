@@ -1,9 +1,10 @@
 'use strict';
 
 module.exports = function (grunt, data) {
-  
-  if (grunt.cli.options.debug) 
+
+  if (grunt.cli.options.debug) {
     console.log('Loading `wiredep.js`');
+  }
 
   return {
     app: {
@@ -17,18 +18,18 @@ module.exports = function (grunt, data) {
       fileTypes:{
         js: {
           block: /(([\s\t]*)\/{2}\s*?bower:\s*?(\S*))(\n|\r|.)*?(\/{2}\s*endbower)/gi,
-            detect: {
-              js: /'(.*\.js)'/gi
-            },
-            replace: {
-              js: '\'{{filePath}}\','
-            }
+          detect: {
+            js: /'(.*\.js)'/gi
+          },
+          replace: {
+            js: '\'{{filePath}}\','
           }
         }
+      }
     },
     sass: {
       src: [data.appPath + '/styles/{,*/}*.{scss,sass}'],
-      ignorePath: /(\.\.\/){1,2}bower_components\//
+      ignorePath: data.rootPath + '/bower_components/'
     }
   };
 };

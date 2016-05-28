@@ -2,8 +2,9 @@
 
 module.exports = function (grunt, data) {
 
-  if (grunt.cli.options.debug) 
+  if (grunt.cli.options.debug) {
     console.log('Loading `clean.js`');
+  }
 
   return {
     dist: {
@@ -12,7 +13,7 @@ module.exports = function (grunt, data) {
         src: [
           data.rootPath + '/.tmp',
           data.distPath + '/{,*/}*',
-          '!' + data.distPath +'/.git{,*/}*'
+          '!' + data.distPath + '/.git{,*/}*'
         ]
       }]
     },

@@ -3,8 +3,9 @@
 
 module.exports = function (grunt, data) {
 
-  if (grunt.cli.options.debug) 
+  if (grunt.cli.options.debug) {
     console.log('Loading `connect.js`');
+  }
 
   return {
     options: {
@@ -20,7 +21,8 @@ module.exports = function (grunt, data) {
         middleware: function (connect) {
           return [
             data.modRewrite([
-              '!\\.ttf|\\.woff|\\.ttf|\\.eot|\\.html|\\.js|\\.coffee|\\.css|\\.png|\\.jpg|\\.gif|\\.svg|\\.webm$ /index.html [L]'
+              '!\\.ttf|\\.woff|\\.ttf|\\.eot|\\.html|\\.js|\\.coffee|\\.css|\\.png|\\.jpg|\\.gif|' +
+              '\\.svg|\\.webm$ /index.html [L]'
             ]),
             connect.static(data.rootPath + '/.tmp'),
             connect().use(
@@ -58,7 +60,8 @@ module.exports = function (grunt, data) {
         middleware: function (connect) {
           return [
             modRewrite([
-              '!\\.ttf|\\.woff|\\.ttf|\\.eot|\\.html|\\.js|\\.coffee|\\.css|\\.png|\\.jpg|\\.gif|\\.svg|\\.webm$ /index.html [L]'
+              '!\\.ttf|\\.woff|\\.ttf|\\.eot|\\.html|\\.js|\\.coffee|\\.css|\\.png|\\.jpg|\\.gif|' +
+              '\\.svg|\\.webm$ /index.html [L]'
             ]),
             connect.static(data.distPath)
           ];

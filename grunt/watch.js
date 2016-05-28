@@ -2,9 +2,10 @@
 
 module.exports = function (grunt, data) {
 
-  if (grunt.cli.options.debug) 
+  if (grunt.cli.options.debug) {
     console.log('Loading `watch.js`');
-
+  }
+  console.log(data.appPath);
   return {
     // html2js: {
     //   files: [
@@ -14,12 +15,12 @@ module.exports = function (grunt, data) {
     //   tasks: ['newer:html2js:main']
     // },
     bower: {
-      files: [data.rootPath + '/bower.json'],
+      files: [data.rootPath + '/bower.json', 'bower_components/'],
       tasks: ['wiredep']
     },
     js: {
       files: [
-        data.appPath + '/scripts/**/*.js', 
+        data.appPath + '/scripts/**/*.js',
         '!' + data.appPath + '/scripts/**/*.spec.js',
         '!' + data.appPath + '/scripts/**/*.e2e.js'
       ],
@@ -29,17 +30,13 @@ module.exports = function (grunt, data) {
       }
     },
     jsTest: {
-      files: [data.appPath + '/scripts/**/*.spec.js', data.appConfigPath + '/karma.conf.js' ],
+      files: [data.appPath + '/scripts/**/*.spec.js', data.appConfigPath + '/karma.conf.js'],
       tasks: ['newer:jshint:test', 'newer:jscs:test', 'karma']
     },
-    compass: {
-      files: [data.appPath + '/styles/{,*/}*.{scss,sass}'],
-      tasks: ['compass:server', 'postcss:server']
+    sass: {
+      files: [data.appPath + '/**/*.{scss,sass}'],
+      tasks: ['sass:dist']
     },
-    // sass: {
-    //   files: [data.appPath + '/**/*.{scss,sass}'],
-    //   tasks: ['sass:dist'/*, 'autoprefixer'*/]
-    // },
     gruntfile: {
       files: [data.rootPath + '/Gruntfile.js', data.rootPath + '/grunt/*.js']
     },

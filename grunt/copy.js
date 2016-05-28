@@ -2,9 +2,9 @@
 
 module.exports = function (grunt, data) {
 
-  if (grunt.cli.options.debug) 
+  if (grunt.cli.options.debug) {
     console.log('Loading `copy.js`');
-
+  }
   return {
     dist: {
       files: [{

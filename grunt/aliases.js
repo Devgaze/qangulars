@@ -53,35 +53,35 @@ var defaultTasks = [
 ];
 
 module.exports = {
-  
+
   /* serve */
   'serve': {
     description: '',
     tasks: serveTasks
   },
-  
+
   /* test */
   'test': {
     description: '',
     tasks: testTasks
   },
-  
+
   // 'e2e': {
   //   description: '',
   //   tasks: e2eTasks
   // },
-  
+
   /* build */
   'build': {
     description: '',
     tasks: buildTasks
   },
-  
+
   /* build */
   'default': {
     description: '',
     tasks: defaultTasks
   }
-  
+
 };
 
