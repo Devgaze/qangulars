@@ -1,0 +1,12 @@
+ ____  ____  _  _   ___   __   ____  ____ 
+(    \(  __)/ )( \ / __) / _\ (__  )(  __)
+ ) D ( ) _) \ \/ /( (_ \/    \ / _/  ) _) 
+(____/(____) \__/  \___/\_/\_/(____)(____)
+__________________________________________
+==========================================
+
+Project started with:     https://github.com/Devgaze/qangulars
+Project owner:            <your name / company>
+Contributors:             <your colleagues / partners>
+Notes:
+--
