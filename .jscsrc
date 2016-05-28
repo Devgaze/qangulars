@@ -1,4 +1,5 @@
 {
     "excludeFiles": ["node_modules/**", "bower_components/**"],
-    "preset": "airbnb"
+    "preset": "airbnb",
+    "safeContextKeyword": ["_this", "that", "vm", "me"]
 }
