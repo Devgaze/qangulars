@@ -120,6 +120,7 @@ For initial version (1.0.0) following things were done:
 │   └── robots.txt
 ├── config
 │   └── karma.conf.js
+├── doc
 ├── grunt
 │   ├── aliases.js
 │   ├── cdnify.js
