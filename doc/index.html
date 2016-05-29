@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>DocStrap Index</title>
+
+	<!--[if lt IE 9]>
+	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link type="text/css" rel="stylesheet" href="styles/sunlight.default.css">
+
+	<link type="text/css" rel="stylesheet" href="styles/site.cosmo.css">
+
+</head>
+
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top navbar-inverse">
+<div class="container">
+	<div class="navbar-header">
+		<a class="navbar-brand" href="index.html">DocStrap</a>
+		<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#topNavigation">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+        </button>
+	</div>
+	<div class="navbar-collapse collapse" id="topNavigation">
+		<ul class="nav navbar-nav">
+			
+			<li class="dropdown">
+				<a href="modules.list.html" class="dropdown-toggle" data-toggle="dropdown">Modules<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="app.module_components.html">app.components</a></li><li><a href="app.module_core.html">app.core</a></li><li><a href="app.module_shared.html">app.shared</a></li><li><a href="core.module_internals.html">core.internals</a></li><li><a href="internals.module_exception.html">internals.exception</a></li><li><a href="internals.module_logger.html">internals.logger</a></li><li><a href="internals.module_router.html">internals.router</a></li><li><a href="module-app.html">app</a></li><li><a href="shared.module_spinner.html">shared.spinner</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="global.html" class="dropdown-toggle" data-toggle="dropdown">Global<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="global.html#error">error</a></li><li><a href="global.html#info">info</a></li><li><a href="global.html#moment">moment</a></li><li><a href="global.html#success">success</a></li><li><a href="global.html#warning">warning</a></li>
+				</ul>
+			</li>
+			
+		</ul>
+		<div class="col-sm-3 col-md-3">
+            <form class="navbar-form" role="search">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search" name="q" id="search-input">
+                    <div class="input-group-btn">
+                        <button class="btn btn-default" id="search-submit"><i class="glyphicon glyphicon-search"></i></button>
+                    </div>
+                </div>
+            </form>
+        </div>
+	</div>
+
+</div>
+</div>
+
+
+<div class="container" id="toc-content">
+<div class="row">
+
+	
+	<div class="col-md-8">
+	
+		<div id="main">
+			
+
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+
+
+
+
+
+    <section class="readme-section">
+        <article><h1>QANGULARS - work in progress</h1><p><em>Quick Angularjs Scaffolding</em> is my alternation of a project template built with a popular <em>Yeoman's Angular generator</em>. </p>
+<p>Yeoman's Angular Generator is a great tool and I enjoy using it, but every time when I start an AngularJS project, I find myself tweaking the project template  (mostly in the same way) to suit my needs. That leads me to spend time on unnecessary things, which is not productive, especially when I am under a deadline constraint.</p>
+<p>This project will evolve with time and needs, but main idea behind this project is to minimize that waste of time as much as possible, if not to eliminate it completely in some cases.</p>
+<p><strong><em>NOTE</em></strong></p>
+<p><em>All files are using 2 space indentation, if you wish to use 4 space indentation and be consistent throughout the project, you will have to manually update every file.</em></p>
+<h2>How to use it?</h2><p>Simply clone the repo to your working directory and start using it</p>
+<pre class="prettyprint source"><code># clone the project
+git clone https://github.com/Devgaze/qangulars.git
+
+# run grunt server
+grunt serve
+
+# to build the project
+grunt build</code></pre><p>and then start developing, or modify it to meet your requirements.</p>
+<p>For testing you have available following commands</p>
+<pre class="prettyprint source"><code># run tests
+grunt test
+
+# run end-to-end tests with protractor
+grunt e2e</code></pre><p>For deployment to your live server, use the following</p>
+<pre class="prettyprint source"><code># deploy to live server
+grunt deploy</code></pre><p>And for creating a documentation use following command</p>
+<pre class="prettyprint source"><code># create documentation
+grunt bookify</code></pre><p>Documentation is generated in <code>doc/</code> folder.</p>
+<h2>What is changed?</h2><p>Mostly focusing on project structure and updating <em>deprecated packages</em> where some were added, some deleted and some marked <em>deprecated</em> updated with the favoured versions.</p>
+<p>For initial version (1.0.0) following things were done:</p>
+<ul>
+<li>replaced deprecated <em>autoprefixer-core</em> with <strong>autoprefixer</strong></li>
+<li>updated <em>grunt-postcss</em> to newer version</li>
+<li>removed <em>grunt-angular-templates</em> but feel free to use it if you usually do</li>
+<li>added <strong>karma-spec-reporter</strong> for more descriptive test output<ul>
+<li>if you prefer default reporter, in <code>config/karma.config.js</code> file just comment out line saying <code>reporters: ['spec'],</code></li>
+</ul>
+</li>
+<li>added <strong>load-grunt-config</strong> module to de-clutter <em>Gruntfile.js</em></li>
+<li>moved grunt config files into <code>grunt/</code> directory to keep everything neat and tidy (grunt tasks are defined in <code>grunt/aliases.js</code>)</li>
+<li>added <strong>connect_modrewrite</strong> module for easier mod rewrites on <strong>connect</strong> (dev) server</li>
+<li>added <strong>grunt-karma</strong> </li>
+<li>replaced Yeoman's way of running tests to <code>grunt test</code></li>
+<li>removed <strong>grunt-contrib-compass</strong> and added <strong>grunt-sass</strong> package</li>
+<li>project restructured to be more aligned to what <a href="https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md">Papa John's and AngularJs Team</a> recommends<ul>
+<li>some things were omitted and some altered though<ul>
+<li>not using <em>toastr</em></li>
+<li><em>blocks</em> renamed to <strong>internals</strong></li>
+<li>added additional global object to IIFE's called <code>projectName</code> which should ideally be renamed per project</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>added <strong>grunt-jsdoc</strong> and <strong>ink-docstrap</strong> for building documentation - it is standalone command, but you can integrate it in build process</li>
+<li>stay tuned - more will be added here before official release </li>
+</ul>
+<h2>Project structure</h2><pre class="prettyprint source"><code>.
+├── app
+│   ├── images
+│   ├── scripts
+│   │   ├── components
+│   │   │   ├── welcome
+│   │   │   │   ├── _header.partial.html
+│   │   │   │   ├── _welcome.scss
+│   │   │   │   ├── welcome.controller.js
+│   │   │   │   ├── welcome.controller.spec.js
+│   │   │   │   ├── welcome.module.js
+│   │   │   │   ├── welcome.routes.js
+│   │   │   │   └── welcome.view.html
+│   │   │   └── components.module.js
+│   │   ├── core
+│   │   │   ├── internals
+│   │   │   │   ├── exception
+│   │   │   │   │   ├── exception-handler.provider.js
+│   │   │   │   │   ├── exception.factory.js
+│   │   │   │   │   └── exception.module.js
+│   │   │   │   ├── logger
+│   │   │   │   │   ├── logger.factory.js
+│   │   │   │   │   └── logger.module.js
+│   │   │   │   ├── router
+│   │   │   │   │   ├── router-helper.provider.js
+│   │   │   │   │   └── router.module.js
+│   │   │   │   └── internals.module.js
+│   │   │   ├── core.constants.js
+│   │   │   └── core.module.js
+│   │   ├── shared
+│   │   │   ├── spinner
+│   │   │   │   ├── _spinner.style.scss
+│   │   │   │   ├── spinner.directive.js
+│   │   │   │   ├── spinner.module.js
+│   │   │   │   └── spinner.view.html
+│   │   │   └── shared.module.js
+│   │   └── app.module.js
+│   ├── styles
+│   │   └── main.scss
+│   ├── 404.html
+│   ├── favicon.ico
+│   ├── humans.txt
+│   ├── index.html
+│   └── robots.txt
+├── config
+│   └── karma.conf.js
+├── grunt
+│   ├── aliases.js
+│   ├── cdnify.js
+│   ├── clean.js
+│   ├── concurrent.js
+│   ├── connect.js
+│   ├── copy.js
+│   ├── filerev.js
+│   ├── htmlmin.js
+│   ├── imagemin.js
+│   ├── jscs.js
+│   ├── jshint.js
+│   ├── karma.js
+│   ├── ngAnnotate.js
+│   ├── postcss.js
+│   ├── sass.js
+│   ├── svgmin.js
+│   ├── usemin.js
+│   ├── useminPrepare.js
+│   ├── watch.js
+│   └── wiredep.js
+├── Gruntfile.js
+├── LICENSE
+├── README.md
+├── bower.json
+└── package.json</code></pre><h2>Maintenance - what is the plan?</h2><p>As I will primarily use this repo for creating my future projects, I will check, and if necessary update, both <code>bower</code> and <code>npm</code> modules <strong>on a monthly basis</strong>. </p>
+<p>If you have suggestions or doubts feel free to create an issue.</p></article>
+    </section>
+
+
+
+
+
+
+
+		</div>
+	</div>
+
+	<div class="clearfix"></div>
+
+	
+		<div class="col-md-3">
+			<div id="toc" class="col-md-3 hidden-xs hidden-sm hidden-md"></div>
+		</div>
+	
+
+</div>
+</div>
+
+<div class="modal fade" id="searchResults">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Search results</h4>
+      </div>
+      <div class="modal-body"></div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div>
+
+<footer>
+
+
+	<span class="copyright">
+	DocStrap Copyright © 2012-2015 The contributors to the JSDoc3 and DocStrap projects.
+	</span>
+
+<span class="jsdoc-message">
+	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.0</a>
+	
+		on Sun May 29th 2016
+	
+	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
+</span>
+</footer>
+
+<script src="scripts/docstrap.lib.js"></script>
+<script src="scripts/toc.js"></script>
+<script type="text/javascript" src="scripts/fulltext-search-ui.js"></script>
+
+<script>
+$( function () {
+	$( "[id*='$']" ).each( function () {
+		var $this = $( this );
+
+		$this.attr( "id", $this.attr( "id" ).replace( "$", "__" ) );
+	} );
+
+	$( ".tutorial-section pre, .readme-section pre" ).each( function () {
+		var $this = $( this );
+
+		var example = $this.find( "code" );
+		exampleText = example.html();
+		var lang = /{@lang (.*?)}/.exec( exampleText );
+		if ( lang && lang[1] ) {
+			exampleText = exampleText.replace( lang[0], "" );
+			example.html( exampleText );
+			lang = lang[1];
+		} else {
+			var langClassMatch = example.parent()[0].className.match(/lang\-(\S+)/);
+			lang = langClassMatch ? langClassMatch[1] : "javascript";
+		}
+
+		if ( lang ) {
+
+			$this
+			.addClass( "sunlight-highlight-" + lang )
+			.addClass( "linenums" )
+			.html( example.html() );
+
+		}
+	} );
+
+	Sunlight.highlightAll( {
+		lineNumbers : true,
+		showMenu : true,
+		enableDoclinks : true
+	} );
+
+	$.catchAnchorLinks( {
+        navbarOffset: 10
+	} );
+	$( "#toc" ).toc( {
+		anchorName  : function ( i, heading, prefix ) {
+			var id = $( heading ).attr( "id" );
+			return id && id.replace(/\~/g, '-inner-').replace(/\./g, '-static-') || ( prefix + i );
+		},
+		selectors   : "#toc-content h1,#toc-content h2,#toc-content h3,#toc-content h4",
+		showAndHide : false,
+		smoothScrolling: true
+	} );
+
+	$( "#main span[id^='toc']" ).addClass( "toc-shim" );
+	$( '.dropdown-toggle' ).dropdown();
+
+    $( "table" ).each( function () {
+      var $this = $( this );
+      $this.addClass('table');
+    } );
+
+} );
+</script>
+
+
+
+<!--Navigation and Symbol Display-->
+
+
+<!--Google Analytics-->
+
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		SearcherDisplay.init();
+	});
+</script>
+
+</body>
+</html>

@@ -1,37 +1,27 @@
-'use strict';
-
 /**
- * @ngdoc overview
- * @name bapApp
- * @description
- * # bapApp
- *
- * Main module of the application.
+ *  @module app
+ *  @description
+ *  It loads 3 main modules:
+ *    - app.core        (Angular modules and internal services)
+ *    - app.shared      (Shared application components)
+ *    - app.components  (Individiual application components)
  */
-angular
-  .module('bapApp', [
-    'ngAnimate',
-    'ngAria',
-    'ngCookies',
-    'ngMessages',
-    'ngResource',
-    'ngRoute',
-    'ngSanitize',
-    'ngTouch'
-  ])
-  .config(function ($routeProvider) {
-    $routeProvider
-      .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl',
-        controllerAs: 'main'
-      })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl',
-        controllerAs: 'about'
-      })
-      .otherwise({
-        redirectTo: '/'
-      });
-  });
+(function (projectName, angular) {
+
+  'use strict';
+
+  angular
+    .module('app', [
+
+      // core module
+      'app.core',
+
+      // shared modules
+      'app.shared',
+
+      // application modules
+      'app.components',
+
+    ]);
+
+})(window.projectName = window.projectName || {}, angular);
