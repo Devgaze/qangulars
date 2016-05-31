@@ -30,12 +30,12 @@ For testing you have available following commands
     # run tests
     grunt test
 
-    # run end-to-end tests with protractor
+    # run end-to-end tests with protractor << NOT YET IMPLEMENTED
     grunt e2e
 
 For deployment to your live server, use the following
 
-    # deploy to live server
+    # deploy to live server << NOT YET IMPLEMENTED
     grunt deploy
 
 And for creating a documentation use following command
@@ -44,6 +44,19 @@ And for creating a documentation use following command
     grunt bookify
 
 Documentation is generated in `doc/` folder.
+
+There is also small utility called `qng.sh` which helps you in creation of new componentes (just follow the steps, it's really straightforward)
+
+    # give it exec rigths first
+    chmod u+x qng.sh
+    # run it
+    ./qng.sh
+    >
+    Quick Angular Scaffolding - creat new
+    *********************************************
+    ** 1) Application component
+    ** 2) Shared component
+    Type the number option and press enter or leave it blank and press enter to exit.
 
 ## What is changed?
 
@@ -68,6 +81,11 @@ For initial version (1.0.0) following things were done:
      * *blocks* renamed to **internals**
      * added additional global object to IIFE's called `projectName` which should ideally be renamed per project
  * added **grunt-jsdoc** and **ink-docstrap** for building documentation - it is standalone command, but you can integrate it in build process
+ * updted to newest version of **grunt-contrib-jshint** and **grunt-jscs**
+ * updated **.jshintrc** and **.jscs** rules to match to Airbnb settings with following exceptions 
+  * `latedef` true,  
+  * "safeContextKeyword": ["_this", "that", "vm", "me"]
+ * added **qng.sh** utility for easier generation of new components 
  * stay tuned - more will be added here before official release 
 
 

@@ -14,11 +14,12 @@ module.exports = function(config) {
     // testing framework to use (jasmine/mocha/qunit/...)
     // as well as any additional frameworks (requirejs/chai/sinon/...)
     frameworks: [
-      'jasmine'
+      'jasmine',
     ],
 
     // list of files / patterns to load in the browser
     files: [
+
       // bower:js
       'bower_components/jquery/dist/jquery.js',
       'bower_components/angular/angular.js',
@@ -34,9 +35,12 @@ module.exports = function(config) {
       'bower_components/angular-ui-router/release/angular-ui-router.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
+
+      // load modules first
+      'app/scripts/**/*.module.js',
       'app/scripts/**/*.js',
       'test/mock/**/*.js',
-      'test/spec/**/*.js'
+      'test/spec/**/*.js',
     ],
 
     // list of files / patterns to exclude
@@ -55,25 +59,25 @@ module.exports = function(config) {
     // - PhantomJS
     // - IE (only Windows)
     browsers: [
-      'PhantomJS'
+      'PhantomJS',
     ],
 
     // Which plugins to enable
     plugins: [
       'karma-phantomjs-launcher',
       'karma-jasmine',
-      'karma-spec-reporter'
+      'karma-spec-reporter',
     ],
 
     // Comment out to disable `karma-spec-reporter`
     reporters: ['spec'],
     specReporter: {
-        maxLogLines: 5,         // limit number of lines logged per test
-        suppressErrorSummary: true,  // do not print error summary
-        suppressFailed: false,  // do not print information about failed tests
-        suppressPassed: false,  // do not print information about passed tests
-        suppressSkipped: true,  // do not print information about skipped tests
-        showSpecTiming: false // print the time elapsed for each spec
+      maxLogLines: 5,             // limit number of lines logged per test
+      suppressErrorSummary: true, // do not print error summary
+      suppressFailed: false,      // do not print information about failed tests
+      suppressPassed: false,      // do not print information about passed tests
+      suppressSkipped: true,      // do not print information about skipped tests
+      showSpecTiming: false,      // print the time elapsed for each spec
     },
 
     // Continuous Integration mode

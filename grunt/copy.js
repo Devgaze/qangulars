@@ -5,6 +5,8 @@ module.exports = function (grunt, data) {
   if (grunt.cli.options.debug) {
     console.log('Loading `copy.js`');
   }
+
+  console.log(data.rootPath);
   return {
     dist: {
       files: [{
@@ -28,7 +30,7 @@ module.exports = function (grunt, data) {
       }, {
         expand: true,
         cwd: '.',
-        src: data.rootPath + '/bower_components/bootstrap-sass-official/assets/fonts/bootstrap/*',
+        src: 'bower_components/bootstrap-sass-official/assets/fonts/bootstrap/*',
         dest: data.distPath
       }]
     },
