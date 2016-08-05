@@ -15,7 +15,16 @@ This project will evolve with time and needs, but main idea behind this project 
 Simply clone the repo to your working directory and start using it
 
     # clone the project
-    git clone https://github.com/Devgaze/qangulars.git
+    git clone https://github.com/Devgaze/qangulars.git <your-project-name>
+    
+    # remove .git folder from your project and re-initilise it
+    cd <your-project-name>
+    rm -rf .git
+    git init
+    
+    # install Node modules and bower packages
+    npm install 
+    bower install
     
     # run grunt server
     grunt serve
